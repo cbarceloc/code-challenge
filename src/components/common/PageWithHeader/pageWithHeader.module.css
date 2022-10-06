@@ -1,0 +1,14 @@
+.content {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.logoContainer {
+  display: flex;
+}

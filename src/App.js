@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import "./index.css";
+import { AddsProvider } from "store/AddsContext";
 
 const router = createBrowserRouter([
   {
@@ -10,8 +10,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-export default ReactDOM.createRoot(document.getElementById("root")).render(
+export default (
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AddsProvider>
+      <RouterProvider router={router} />
+    </AddsProvider>
   </React.StrictMode>
 );
