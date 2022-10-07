@@ -1,0 +1,42 @@
+.container {
+  margin-top: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+}
+.header {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+.horizontalSpacing {
+  width: 10px;
+}
+.verticalSpacing {
+  height: 10px;
+}
+.infoWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+.description {
+  flex: 1;
+}
+.addImage {
+  object-fit: cover;
+}
+
+.infoButtonWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(246, 246, 246);
+}

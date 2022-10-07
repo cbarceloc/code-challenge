@@ -1,20 +1,28 @@
-import Product from "./components/product";
-import { useAddsContext } from "store/AddsContext";
+import Product from "./components/productListItem";
+import { useAdsContext } from "store/AdsContext";
 import styles from "./root.module.css";
 import PageWithHeader from "components/common/PageWithHeader";
+import { useNavigate } from "react-router-dom";
+import { getProductPath } from "globals/routerPaths";
 
 export default function Root() {
-  // context
-  const { products } = useAddsContext();
+  //hooks
+  const navigate = useNavigate();
 
-  function handleClickProduct() {}
+  // context
+  const { products } = useAdsContext();
+
+  // handlers
+  function handleClickProduct(id) {
+    navigate(getProductPath(id));
+  }
   return (
     <PageWithHeader>
       <div className={styles.container}>
-        {products.map((product, index) => (
+        {products.map((product) => (
           <Product
-            key={product.key}
-            onClick={handleClickProduct}
+            key={product.id}
+            onClick={() => handleClickProduct(product.id)}
             name={product.productName}
             description={product.productDescription}
             image={product.productImage}

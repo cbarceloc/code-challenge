@@ -4,7 +4,9 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import Root from "./views/root";
-import { rootPath } from "./globals/routerPaths";
+import Product from "./views/product";
+
+import { getProductPath, rootPath } from "./globals/routerPaths";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -12,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: rootPath,
     element: <Root />,
+  },
+  {
+    path: getProductPath(":id"),
+    element: <Product />,
   },
 ]);
 

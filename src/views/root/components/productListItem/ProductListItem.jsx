@@ -6,7 +6,7 @@ import CardHeader from "components/common/CardHeader";
 import Avatar from "components/common/Avatar";
 import Typography from "components/common/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
-import styles from "./product.module.css";
+import styles from "./productListItem.module.css";
 
 function Product({ name, price, description, image, onClick }) {
   return (
